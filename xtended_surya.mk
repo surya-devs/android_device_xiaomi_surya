@@ -21,14 +21,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Xtended stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+
+# Pixel Charger
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
+# Faceunlock
+TARGET_FACE_UNLOCK_SUPPORT := YES
+
+# Use Background Blur
+TARGET_USES_BLUR := true
 
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Device identifier
-PRODUCT_NAME := lineage_surya
+PRODUCT_NAME := xtended_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X3

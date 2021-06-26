@@ -71,4 +71,13 @@
 
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">90</integer>
+
+    <!-- For Enabling Battery Heath -->
+    <bool name="config_supportBatteryHealth">true</bool>
+
+    <!-- If device supports battery health options -->
+    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
+    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
+    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
+
 </resources>
